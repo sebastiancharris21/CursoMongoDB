@@ -1,0 +1,4 @@
+//06-update-docs
+
+use("platzi_store")
+db.products.find()
