@@ -1,0 +1,12 @@
+//Class update many documents
+
+use("sample_training")
+
+db.zips.updateMany(
+    //query
+    {city: 'CLEVELAND'},
+    //update -> operator
+    {$set:{
+        pop: 100
+    }}
+)
