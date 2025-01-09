@@ -1,0 +1,13 @@
+use("platzi_store")
+
+//upsert -> is the combination to update an insert. 
+db.iot.updateOne({
+    sensor: "A001",
+    date: "2022-01-04"
+ },{
+    $push:{
+        reading: 232334
+    }
+ },{
+    upsert: true
+ })
