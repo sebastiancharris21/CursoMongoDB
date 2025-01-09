@@ -1,0 +1,7 @@
+use("platzi_store")
+
+//db.products.find({$eq: {qty: 20}})
+//db.products.find({"item.code":{$eq:"123"}})
+//db.products.find({"item.code":"123"})
+
+//db.products.find({qty:{$ne: 20}})
