@@ -1,0 +1,20 @@
+use("platzi_store")
+
+// operator $in (values and arrays) 
+
+//db.inventory.find({qty: {$in: [20, 25]}})
+//db.inventory.find({tags: {$in: ["book", "electronics"]}})
+
+//operator $nin (imaginated this operator is OR)
+//db.inventory.find({qty: {$in: [20, 25]}})
+//db.inventory.find({tags: {$nin: ["book", "electronics"]}})
+
+//Operator $all only arrays (imaginated this operator is AND)
+//db.inventory.find({tags:{$all:["school","book"]}})
+
+//Operator $size only arrays
+//db.inventory.find({tags:{$size: 2}})
+
+//$elemMatch
+//db.survey.find({results:{$elemMatch:{products: "xyz"}}})
+db.survey.find({results:{$elemMatch:{products: "xyz", score:{$gte: 7}}}})
