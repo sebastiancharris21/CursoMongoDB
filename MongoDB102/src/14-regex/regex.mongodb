@@ -1,6 +1,6 @@
 use("platzi_store")
 
-
+//search the estructure the text
 //db.inventory.find({"item.description":{$regex: /line/}})
 //db.inventory.find({"item.description":{$regex: /LINE/i}}) //i->ignore mayus
 //db.inventory.find({"item.description":{$regex: /line$/i}}) // $ -> final 
