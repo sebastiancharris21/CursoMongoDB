@@ -1,0 +1,32 @@
+use("sample_training")
+
+// Operator $and implicit version
+// db.inspections.find({
+//     sector: "Tax Preparers - 891",
+//     result:"Unable to Locate"
+// }).count()
+
+//operator $and ecplicit version
+// db.inspections.find({
+//     $and:[
+//     {sector: "Tax Preparers - 891"},
+//     {result:"Unable to Locate"}
+// ]})
+
+//operator $OR explicit version
+// db.inspections.find({
+//     $or:[
+//     {sector: "Tax Preparers - 891"},
+//     {result:"Unable to Locate"}
+// ]})
+
+
+//operator $NOR explicit version
+db.inspections.find({
+    $nor:[
+    {result: "No Violation Issued"},
+    {result:"Unable to Locate"}
+]},{
+    result: 1,
+    _id:0
+})
